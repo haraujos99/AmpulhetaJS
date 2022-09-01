@@ -6,18 +6,18 @@ function ampulheta(n){
         let row = ''
 
         for(let j = 1; j <= n; j++) {
-            if(i == 0 || i == n){
+            if(i == 1 || i == n){
                 row += '#';
             } else if(j==1 || j == n){
                 row += '#';
             } else  if(i <= n/2) {
-                if(j < i || j > n - i){
+                if(j < i || j > n-i+1){
                     row += ' ';
                 } else {
                     row += '#';
                 }
             } else{
-                if(j == i || j == n - i){
+                if(j == i || j == n-i+1){
                     row += '#';
                 } else {
                     row += ' ';
@@ -26,6 +26,33 @@ function ampulheta(n){
         }
         console.log(row);
     }   
+
+    for(let i = 1; i <= n; i++) {
+        let row = ''
+
+        for(let j = 1; j <= n; j++) {
+            if(i == 1 || i == n){
+                row += '#';
+            } else if(j==1 || j == n){
+                row += '#';
+            } else  if(i <= n/2) {
+                if(j == i || j == n-i+1){
+                    row += '#';
+                } else {
+                    row += ' ';
+                }
+            } else{                
+                if(j > i || j < n-i+1){
+                    row += ' ';
+                } else {
+                    row += '#';
+                }
+            }
+        }
+        console.log(row);
+    }   
+
+    
 }
 
 ampulheta(20);
