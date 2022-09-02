@@ -27,6 +27,12 @@ function ampulheta(n){
         console.log(row);
     }   
 
+    let divisionBar = '';
+    for(let i=0; i<n; i++){
+        divisionBar += '=';
+    }
+    console.log(divisionBar);
+
     for(let i = 1; i <= n; i++) {
         let row = ''
 
